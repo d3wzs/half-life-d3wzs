@@ -122,7 +122,7 @@ Transparent view
 
 **4.3h**
 
-Today I worked on finishing up the last few things for the case. I made the back that touches the window, a hole for the usb charging port. Along with ventilation holes on both sides. After that I started work on the code. I did ALOT of googling to figure out how to do it. I didnt do a final version of the code because I prefer writing code when I actually have the thing im coding. For know its kind of just to see if a few compenents are working.
+Today I worked on finishing up the last few things for the case. I made the back that touches the window, a hole for the usb charging port. Along with ventilation holes on both sides. After that I started work on the code. I did ALOT of googling to figure out how to do it. I didnt do a final version of the code because I prefer writing code when I actually have the thing im coding. For know its kind of just to see if a few compenents are working. I also organized and upload files to my github repo, along with actually making a readme.
 
 Thanks for reading =)
 
