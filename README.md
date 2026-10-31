@@ -1,1 +1,68 @@
-# Weather Sesnsor
+# Weather Sensor
+
+<img width="532" height="427" alt="Screenshot 2026-10-30 at 18 33 02" src="https://github.com/user-attachments/assets/22287752-a907-46dc-a783-f4c8009279cb" />
+
+This is a project that I made for Hack Clubs Half Life. It is a relatively compact weather sensor that can detect outside weather from inside. The code is far from complete but I find coding much easier when I can troubleshoot and test it with what im coding, so I'll finish it once its been built.
+
+# Features/Attributes
+
+- Indoor Temp Sensing - DHT22
+- Outdoor Temp Sensing - DS18B20
+- 2.8" TFT Display
+- Interaction - Low Profile Switches
+- Light Sensing - SAMIROB VEML7700 Ambient Light Sensor
+- Custom PCB
+- Custom Case
+
+# Hardware
+
+ - ESP32 CP2102 30 Pin Type C: Processing
+ - SAMIROB VEML7700 Ambient Light Sensor: Light Sensing
+ - TFT Display 2.8": Display
+ - DHT22: Temp and Humidity Sensing
+ - DS18B20: Temp Sensing
+ - 2x Kailh Low Profile Switch 1350 Chocolate: Interaction
+ - Custom PCB: does this need explanation?
+ - Custom Case
+If you want more specifics refer to the BOM.
+
+# Repository Guide
+
+- Case Folder - 3D models for the case
+- PCB-Files Folder — PCB Files
+- BOM.csv — bill of materials
+- JOURNAL.md — project journal
+- README.md - you r there
+- weatherSensor.ino - Project Code
+
+# Bill of Materials 
+
+| Item | Qty | Supplier | Cost/item | Total Cost | link |
+|---|---|---|---|---|---|
+| ESP32 CP2102 30 Pin Type C | 1 | Aliexpress | $4.39 | $4.39 | https://www.aliexpress.com/item/1005007059457759.html?spm=a2g0o.productlist.main.11.46a851a1EcOz6O&algo_pvid=48e96717-31fd-498e-90c1-19e31a880a44&algo_exp_id=48e96717-31fd-498e-90c1-19e31a880a44-10&pdp_ext_f=%7B%22order%22%3A%225412%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%212.97%212.96%21%21%2119.73%2119.66%21%402103129017931430541374212e1039%2112000039267548455%21sea%21CA%217748192322%21X%211%210%21n_tag%3A-29919%3Bd%3Aa40d61bf%3Bm03_new_user%3A-29895%3BpisId%3A5000000219084765&curPageLogUid=TuAuhaCvljNJ&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007059457759%7C_p_origin_prod%3A |
+| SAMIROB VEML7700 Ambient Light Sensor | 1 | Aliexpress | $4.27 | $4.27 | https://www.aliexpress.com/item/1005009958037220.html?spm=a2g0o.productlist.main.2.75fb7681j6Ui7M&algo_pvid=dfa98390-67e2-4431-9eba-9c595f163622&algo_exp_id=dfa98390-67e2-4431-9eba-9c595f163622-1&pdp_ext_f=%7B%22order%22%3A%224310%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%218.55%214.27%21%21%2156.75%2128.37%21%402103128817930590690892222e0f66%2112000050688182705%21sea%21CA%217748192322%21X%211%210%21n_tag%3A-29919%3Bd%3Aa40d61bf%3Bm03_new_user%3A-29895&curPageLogUid=fbrqLCyzBraY&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009958037220%7C_p_origin_prod%3A |
+| TFT Display 2.8" | 1 | Aliexpress | $6.28 | $6.28 | https://www.aliexpress.com/item/1005009761383945.html?spm=a2g0o.productlist.main.15.2387633cAe8Gow&algo_pvid=7d59ccbc-6402-42eb-9cfb-cf0d796d9aca&algo_exp_id=7d59ccbc-6402-42eb-9cfb-cf0d796d9aca-14&pdp_ext_f=%7B%22order%22%3A%225189%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%215.50%215.49%21%21%2136.50%2136.43%21%402101e80b17930597168566119e0db4%2112000050079449343%21sea%21CA%217748192322%21X%211%210%21n_tag%3A-29919%3Bd%3Aa40d61bf%3Bm03_new_user%3A-29895%3BpisId%3A5000000219084765&curPageLogUid=fUFAvJOdPnyL&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009761383945%7C_p_origin_prod%3A |
+| DHT22 | 1 | Aliexpress | $1.49 | $1.49 | https://www.aliexpress.com/item/1005010283810231.html?spm=a2g0o.productlist.main.9.1eaa9de5jsxKli&algo_pvid=a384db54-b4ae-4c8e-b987-75d3980b8181&algo_exp_id=a384db54-b4ae-4c8e-b987-75d3980b8181-8&pdp_ext_f=%7B%22order%22%3A%221046%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%212.16%211.49%21%21%2114.34%219.94%21%402101f43b17931139321376665e0f3c%2112000051781867490%21sea%21CA%217748192322%21X%211%210%21n_tag%3A-29919%3Bd%3Aa40d61bf%3Bm03_new_user%3A-29895&curPageLogUid=BakEn6D2S6Zy&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005010283810231%7C_p_origin_prod%3A |
+| DS18B20 | 1 | Aliexpress | $2.90 | $2.90 | https://www.aliexpress.com/item/1005011548245287.html?spm=a2g0o.productlist.main.3.2bf042419AMdu4&algo_pvid=5bb63854-c1d3-4825-9098-616771c78253&algo_exp_id=5bb63854-c1d3-4825-9098-616771c78253-2&pdp_ext_f=%7B%22order%22%3A%221742%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%212.91%212.90%21%21%2119.33%2119.26%21%402103128817931140735761711e0dd5%2112000055887000991%21sea%21CA%217748192322%21X%211%210%21n_tag%3A-29919%3Bd%3Aa40d61bf%3Bm03_new_user%3A-29895%3BpisId%3A5000000219084765&curPageLogUid=y8eNtvqtPUGa&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005011548245287%7C_p_origin_prod%3A |
+| Low Profile Switches | 1 | Aliexpress | $3.82 | $3.82 | https://www.aliexpress.com/item/1005005979847053.html?spm=a2g0o.productlist.main.2.4ad74897oZOMR5&algo_pvid=2c296add-5454-4b3c-a762-977344eb3b0e&algo_exp_id=2c296add-5454-4b3c-a762-977344eb3b0e-1&pdp_ext_f=%7B%22order%22%3A%2281%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21USD%213.82%213.82%21%21%213.82%213.82%21%402101c4b817931572409778871e0d2e%2112000035151278587%21sea%21CA%217748192322%21X%211%210%21n_tag%3A-29919%3Bd%3Aa40d61bf%3Bm03_new_user%3A-29895&curPageLogUid=kl5wdgyCi0Wz&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005005979847053%7C_p_origin_prod%3A |
+| PCB | 1 | JLCPCB | $5.50 | $5.50 | https://cart.jlcpcb.com/quote?spm=jlcpcb.Public.2006 |
+| Estimated total shipping | 1 |   |   | $0.00 |   |
+
+
+# Media
+
+<img width="462" height="255" alt="Screenshot 2026-10-27 at 20 40 13" src="https://github.com/user-attachments/assets/ee4ebba3-96e6-4337-bbac-0b8ebe683ddc" />
+<img width="461" height="244" alt="Screenshot 2026-10-27 at 20 40 18" src="https://github.com/user-attachments/assets/3cf38517-8b82-4752-92a6-6cc8244f2542" />
+<img width="958" height="573" alt="Screenshot 2026-10-27 at 20 42 23" src="https://github.com/user-attachments/assets/ae577238-6661-447f-b4a9-39dbf24125f2" />
+<img width="779" height="622" alt="Screenshot 2026-10-30 at 08 02 56" src="https://github.com/user-attachments/assets/968cb733-19ab-4f2f-875b-8a676b05a68d" />
+<img width="532" height="427" alt="Screenshot 2026-10-30 at 18 33 02" src="https://github.com/user-attachments/assets/3714df87-9379-446e-b2e2-f93a57c339b8" />
+
+
+sorry for the formating, im not sure how to fix it
+
+# Author
+
+- d3wzs(d3wzy)
+
+
+
